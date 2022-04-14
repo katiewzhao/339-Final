@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
+	<link rel="icon" type="image/x-icon" href="img/favicon.svg" />
+	
+	<title>Katie Zhao</title>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPCKBDC5D8"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-CPCKBDC5D8');
+	</script>
+</head>
+
+<body class="gallery">
+	<a class = "skip" href="#cards">Skip to Main Content</a>
+	<header>
+		<nav id="nav">
+			<a href="index.html"><img id="icon" src="img/iconmobile.svg" alt=""></a>
+			<img id="menu" src="img/menu.svg" alt="" onclick="openNav()">
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+							<div id="smnav">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li class="active"><a href="uiux.html">UI/UX Design</a></li>
+									<li><a href="industrial.html">Industrial Design</a></li>
+									<li><a href="about.html">About</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+					
+					<div id="lgnav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="uiux.html">UI/UX Design</a></li>
+								<li><a href="industrial.html">Industrial Design</a></li>
+								<li><a href="about.html">About</a></li>
+							</ul>
+						
+					</div>
+
+		</nav>
+	</header>
+
+	<main>
+		<div class="gallerylanding">
+			<div class="gallerytext">
+				<p>
+					user interface,
+				</p>
+				<p>
+					user experience research,
+				</p>
+				<p>
+					everything human-centered.
+				</p>
+			</div>
+			<img id="arrow" src="img/arrow.svg" alt="skip to content">
+		</div>
+
+		<div class="cards" id="cards">
+			<div class="row row-cols-1 row-cols-sm-2 g-3">
+				<div class="col">
+				  <div class="card">
+					<a href="grow.html"><img src="img/grow.png" class="card-img-top" alt="card-grid-image"><p>grow</p></a>
+					<div class="card-body">
+					  <h5 class="card-title"><span>Grow</span> - connect with loved ones</h5>
+					  <div class="tag">
+						<ul>
+							<li><span>App Interface</span></li>
+							<li><span>Interactive Jewelry</span></li>
+						</ul>
+					</div>
+					</div>
+				  </div>
+				</div>
+				<div class="col">
+				  <div class="card">
+					<a href="spot.html"><img src="img/spot.png" class="card-img-top" alt="card-grid-image"><p>spot</p></a>
+					<div class="card-body">
+					  <h5 class="card-title"><span>SPOT</span> - to lend a helping paw</h5>
+					  <div class="tag">
+						<ul>
+							<li><span>App Interface</span></li>
+							<li><span>User Research</span></li>
+						</ul>
+					</div>		
+					</div>
+				  </div>
+				</div>
+				<div class="col">
+				  <div class="card">
+					<img src="img/flow.png" class="card-img-top" alt="card-grid-image">
+					<div class="card-body">
+					  <h5 class="card-title"><span>Flow</span> - hydrate or diedrate</h5>
+					  <div class="tag">
+						<ul>
+							<li><span>App Interface</span></li>
+							<li><span>Interactive Water Bottle</span></li>
+						</ul>
+					</div>		
+					</div>
+				  </div>
+				</div>
+
+			  </div>
+		</div>
+
+	</main>
+
+	<footer>
+		<a href="https://www.instagram.com/katiewzhao/">instagram<i class="fa-brands fa-instagram"></i></a>
+		<a href="https://www.linkedin.com/in/katie-zhao-017942197/">linkedin<i class="fa-brands fa-linkedin-in"></i></a>
+		<a href="mailto:katiewzhao@gmail.com">email<i class="fa-regular fa-envelope"></i></a>
+		<p>Katie Zhao &copy; 2022</p>
+	</footer>
+
+	<script>
+		function switchTab() {
+			var Image_Id = document.getElementById('switch');
+			var Button_Id = document.getElementById('buttonimg');
+			var ButtonLink_Id = document.getElementById('button');
+			if (Image_Id.src.match("img/uiux.png")) {
+				Image_Id.src = "img/industrial.png";
+				Button_Id.src = "img/industrialbutton.svg";
+				ButtonLink_Id.href = "industrial.html";
+			} else {
+				Image_Id.src = "img/uiux.png";
+				Button_Id.src = "img/uiuxbutton.svg";
+				ButtonLink_Id.href = "uiux.html";
+			}
+		}
+
+		function openNav() {
+			document.getElementById("myNav").style.height = "100%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.height = "0%";
+		}
+
+		var mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
